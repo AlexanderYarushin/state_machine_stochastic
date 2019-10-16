@@ -40,7 +40,7 @@ static std::vector<QString> arrayCondition = {
     {"Ответ по билету"},                    //6
     {"Подглядывание в телефон"},            //7
     {"Упрашивание преподавателя о тройке"},
-    {"Экзамен сдан"},
+    {"Экзамен сдан"}
 };
 
 static std::vector<std::vector<unsigned>> jumpTable = {
