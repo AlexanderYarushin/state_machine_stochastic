@@ -12,17 +12,17 @@ void log(const QString text){
     cout << text;
 }
 
-static std::vector<std::vector<QString>> arrayInputOutput{
-    {"Пойти на экзамен",""},                            //1
-    {"Попытаться сесть вперед",""},                     //2
-    {"Попытаться сесть назад",""},                      //3
-    {"Попытаться достать шпаргалку",""},                //4
-    {"Попытаться списать",""},                          //5
-    {"Пойти отвечать по билету",""},                    //6
-    {"При ответе попытаться подглядеть в телефоне",""}, //7
-    {"Попросить преподавателя о тройке",""},            //8
-    {"Закончить ответ",""},                             //9
-    {"Выйти из аудитории",""},                             //9
+static std::vector<QString> arrayInput{
+    {"Пойти на экзамен"},                            //1
+    {"Попытаться сесть вперед"},                     //2
+    {"Попытаться сесть назад"},                      //3
+    {"Попытаться достать шпаргалку"},                //4
+    {"Попытаться списать"},                          //5
+    {"Пойти отвечать по билету"},                    //6
+    {"При ответе попытаться подглядеть в телефоне"}, //7
+    {"Попросить преподавателя о тройке"},            //8
+    {"Закончить ответ"},                             //9
+    {"Выйти из аудитории"},                             //9
 };
 
 static std::vector<QString> arrayCondition{
@@ -68,7 +68,7 @@ void jump(unsigned index){
 
     for(unsigned i = 0; i < jumpTable.size(); ++i){
         if((index+1) != jumpTable[i][index][0]) {
-            log(QString::number(select+1) + ". " + arrayInputOutput[i][0]+ " / P = " + QString::number(jumpTable[i][index][1]) + "\n");
+            log(QString::number(select+1) + ". " + arrayInput[i]+ " / P = " + QString::number(jumpTable[i][index][1]) + "\n");
             select++;
             selectArray.push_back(jumpTable[i][index][0]);
             probability.push_back(jumpTable[i][index][1]);
