@@ -95,7 +95,7 @@ repeatEnter:
 
         jump(newCondition);
     }else{
-        log("\nПереход из состояния \""+arrayCondition[index]+"\" в состояние \""+arrayCondition[newCondition]+" не удался\"\n\n");
+        log("\nПереход из состояния \""+arrayCondition[index]+"\" в состояние \""+arrayCondition[newCondition]+"\" не удался\n\n");
         jump(index);
     }
 }
